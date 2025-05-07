@@ -1,34 +1,28 @@
 CC = gcc
-# Use -std=c99 or -std=c11 if specific C standard features are used and compiler defaults are older.
-# _GNU_SOURCE for getline is common, -std=gnu99 or similar implies it.
-# For portability and common use:
+# Common CFLAGS for compiling. -pthread is needed.
 CFLAGS = -Wall -Wextra -pthread -g -std=c99
+# Linker flags are often managed by CFLAGS when compiling and linking in one step,
+# or can be separate. -lpthread is crucial for linking.
 LDFLAGS = -lpthread
 
 # The executable name
 TARGET = LogAnalyzer
 
-# Source files - StudentID_main.c should be your actual filename
-# For this example, assuming the main file is named StudentID_main.c
-SOURCES = StudentID_main.c buffer.c
-OBJECTS = $(SOURCES:.c=.o)
+# Source files for the LogAnalyzer executable
+# Ensure your main C file is named 200104004045_main.c
+SOURCES = 200104004045_main.c buffer.c
 
-# Default rule
+# Default rule: build the LogAnalyzer executable
 all: $(TARGET)
 
-$(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS) $(LDFLAGS)
+# Rule to create the LogAnalyzer executable
+# This compiles all source files and links them together in one step,
+# directly producing the TARGET executable without explicit .o files in the Makefile.
+$(TARGET): $(SOURCES) buffer.h
+	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCES) $(LDFLAGS)
 
-# Rule to compile .c files to .o files
-# buffer.h is a dependency for both .c files that include it.
-StudentID_main.o: StudentID_main.c buffer.h
-	$(CC) $(CFLAGS) -c StudentID_main.c -o StudentID_main.o
-
-buffer.o: buffer.c buffer.h
-	$(CC) $(CFLAGS) -c buffer.c -o buffer.o
-
-# Clean rule
+# Clean rule: removes the executable
 clean:
-	rm -f $(TARGET) $(OBJECTS)
+	rm -f $(TARGET)
 
 .PHONY: all clean

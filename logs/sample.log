@@ -1,0 +1,34 @@
+[2023-05-10 10:00:01] INFO: System startup initiated.
+[2023-05-10 10:00:05] DEBUG: Configuration loaded successfully.
+[2023-05-10 10:00:10] WARNING: Low disk space detected on /var.
+[2023-05-10 10:00:15] ERROR: Failed to connect to database server.
+[2023-05-10 10:00:16] INFO: Retrying database connection...
+[2023-05-10 10:00:20] ERROR: Database connection attempt 2 failed.
+[2023-05-10 10:00:25] INFO: User 'admin' logged in from 192.168.1.10.
+[2023-05-10 10:00:30] DEBUG: Processing request ID 123.
+[2023-05-10 10:00:35] ERROR: Critical component 'AuthService' reported an internal ERROR.
+[2023-05-10 10:00:40] INFO: System health check: OK.
+[2023-05-10 10:00:45] WARNING: High CPU usage observed.
+[2023-05-10 10:00:50] INFO: Shutting down module X.
+[2023-05-10 10:00:55] ERROR: Unhandled exception in data processing.
+[2023-05-10 10:01:00] DEBUG: Cache cleared.
+[2023-05-10 10:01:05] INFO: Service Y started.
+[2023-05-10 10:01:10] ERROR: This is another ERROR message for testing.
+[2023-05-10 10:01:15] INFO: All services nominal.
+[2023-05-10 10:00:01] INFO: System startup initiated.
+[2023-05-10 10:00:05] DEBUG: Configuration loaded successfully.
+[2023-05-10 10:00:10] WARNING: Low disk space detected on /var.
+[2023-05-10 10:00:15] ERROR: Failed to connect to database server.
+[2023-05-10 10:00:16] INFO: Retrying database connection...
+[2023-05-10 10:00:20] ERROR: Database connection attempt 2 failed.
+[2023-05-10 10:00:25] INFO: User 'admin' logged in from 192.168.1.10.
+[2023-05-10 10:00:30] DEBUG: Processing request ID 123.
+[2023-05-10 10:00:35] ERROR: Critical component 'AuthService' reported an internal ERROR.
+[2023-05-10 10:00:40] INFO: System health check: OK.
+[2023-05-10 10:00:45] WARNING: High CPU usage observed.
+[2023-05-10 10:00:50] INFO: Shutting down module X.
+[2023-05-10 10:00:55] ERROR: Unhandled exception in data processing.
+[2023-05-10 10:01:00] DEBUG: Cache cleared.
+[2023-05-10 10:01:05] INFO: Service Y started.
+[2023-05-10 10:01:10] ERROR: This is another ERROR message for testing.
+[2023-05-10 10:01:15] INFO: All services nominal.
